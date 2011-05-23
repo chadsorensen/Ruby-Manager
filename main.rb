@@ -10,6 +10,20 @@ class Task
   property :id,           Serial
   property :name,         String
   property :completed_at, DateTime
+  
+   def completed?
+    true if completed_at
+  end
+
+  def self.completed
+    all(:completed_at.not => nil)
+  end
+
+  def link
+    "<a href=\"task/#{self.id}\">#{self.name}</a>"   
+  end
+
+  
 end
 
 # list all tasks
@@ -49,5 +63,18 @@ put '/task/:id' do
     redirect '/'   
   end
 end
+
+# delete confirmation
+get '/task/:id/delete' do
+  @task = Task.get(params[:id])
+  erb :delete
+end
+
+# delete task
+delete '/task/:id' do
+  Task.get(params[:id]).destroy
+  redirect '/'  
+end
+
 
 DataMapper.auto_upgrade!
