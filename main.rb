@@ -18,4 +18,16 @@ get '/' do
   erb :index
 end
 
+# create new task   
+post '/task/create' do
+  task = Task.new(:name => params[:name])
+  if task.save
+    status 201
+    redirect '/'  
+  else
+    status 412
+    redirect '/'   
+  end
+end
+
 DataMapper.auto_upgrade!
