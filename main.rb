@@ -30,4 +30,10 @@ post '/task/create' do
   end
 end
 
+# edit task
+get '/task/:id' do
+  @task = Task.get(params[:id])
+  erb :edit
+end
+
 DataMapper.auto_upgrade!
