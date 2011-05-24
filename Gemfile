@@ -1,4 +1,4 @@
 source :rubygems
 gem 'sinatra', '>= 1.2'
-data_mapper
-dm-postgres-adapter
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
