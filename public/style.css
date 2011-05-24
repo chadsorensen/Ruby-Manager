@@ -45,11 +45,14 @@ h1 a {
 	margin: 10px 0;
 }
 
-#wrapper ol li a {
+#wrapper a {
 	color: #fff;
 	text-decoration: none:
 }
 
+#wrapper a:hover {
+	color: #17B713;
+}
 
 #wrapper ol li.completed {
 	text-decoration:line-through;
@@ -72,10 +75,17 @@ form #name {
 	color: #942525;
 }
 
-form #button {
+form #button,
+form #task_submit {
 	background: url('plus-button.png');
 	border: none;
 	height: 34px;
 	text-indent: -9999px;
 	width: 35px;
+}
+
+h3.delete {
+	text-transform: uppercase;
+	text-decoration: blink;
+	color: #942525;
 }
