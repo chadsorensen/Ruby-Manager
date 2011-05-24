@@ -1,0 +1,81 @@
+body {
+	background: #000;
+	color: #FFF;
+	font-family: 'Open Sans', arial, serif;
+	position: relative;
+}
+
+#head_wrap {
+	width: 450px;
+	position: absolute;
+}
+
+h1 {
+	margin: 10px 30px;
+}
+
+h1 a {
+	display: block;
+	background: url('ruby.png') no-repeat 100% 50%;
+	color: #942525;
+	text-decoration: none;
+	line-height: 70px;
+	width: 300px;
+}
+
+
+#wrapper {
+	width: 700px;
+	margin: 0 auto;
+	font-size: 24px;
+	position: absolute;
+	left: 450px;
+}
+
+#wrapper ol,
+#wrapper li,
+#wrapper a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: decimal inside;
+}
+
+#wrapper li {
+	margin: 10px 0;
+}
+
+#wrapper ol li a {
+	color: #fff;
+	text-decoration: none:
+}
+
+
+#wrapper ol li.completed {
+	text-decoration:line-through;
+	color: #fff;
+	background: url('check_mark.png') no-repeat 100% 50%;
+
+}
+
+#wrapper ol li.completed a {
+	color: #942525;
+}
+
+form {
+	margin: 1em 0 0 0;
+}
+
+form #name {
+	font-size: 24px;
+	width: 400px;
+	color: #942525;
+}
+
+form #button {
+	background: url('plus-button.png');
+	border: none;
+	height: 34px;
+	text-indent: -9999px;
+	width: 35px;
+}

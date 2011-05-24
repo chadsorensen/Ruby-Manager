@@ -1,14 +1,15 @@
 <head>
 <title>Ruby Manager</title>
 <meta charset=utf-8 />
-<style>
-.completed{text-decoration:line-through;}
-</style>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
 <body>
-<h1><a href="/">Ruby Manager</a></h1>
-
-<%= yield %>
-
+<div id="head_wrap">
+	<h1><a href="/">Ruby Manager</a></h1>
+</div>	
+	<div id="wrapper">
+	<%= yield %>
+</div>
 </body>
 </html>

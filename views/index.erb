@@ -1,17 +1,18 @@
 <form action="/task/create" method="POST">
-  <input type="text" name="name" id="name">
-  <input type="submit" value="Add Task!"/>
+Add a New Task: 	<input type="text" name="name" id="name">
+  <input type="submit" id="button" value="Add Task!"/>
 </form>
 
 <h2>Tasks:</h2>
 <% unless @tasks.empty? %>
-<ul>
+<ol>
 <% @tasks.each do |task| %>
 <li <%= "class=\"completed\"" if task.completed? %>>
 <%= task.link %>
 </li>
 <% end %>
-</ul>
+</ol>
 <% else %>
-<p>No Tasks!</p>
+<p>Add a new task!</p>
 <% end %>
+
